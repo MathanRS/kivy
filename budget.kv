@@ -1,0 +1,55 @@
+<BudgetTracker>:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    # Budget display
+    Label:
+        id: budget_label
+        text: "Set Your Budget"
+        font_size: 20
+        size_hint_y: None
+        height: 40
+
+    TextInput:
+        id: budget_input
+        hint_text: "Enter budget amount"
+        multiline: False
+        size_hint_y: None
+        height: 40
+
+    Button:
+        text: "Set Budget"
+        size_hint_y: None
+        height: 50
+        on_press: root.set_budget(self)
+
+    # Category input
+    TextInput:
+        id: category_input
+        hint_text: "Expense category (e.g., Food)"
+        multiline: False
+        size_hint_y: None
+        height: 40
+
+    # Amount input
+    TextInput:
+        id: amount_input
+        hint_text: "Expense amount"
+        multiline: False
+        size_hint_y: None
+        height: 40
+
+    Button:
+        text: "Add Expense"
+        size_hint_y: None
+        height: 50
+        on_press: root.add_expense(self)
+
+    # Expense list display
+    Label:
+        id: expense_list_label
+        text: "No expenses added yet."
+        font_size: 16
+        size_hint_y: None
+        height: 200
